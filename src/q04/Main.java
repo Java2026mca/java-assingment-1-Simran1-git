@@ -28,7 +28,7 @@ public class Main {
             }
         }
         sc.close();
-    }
+    
 
     public static String classify(int num) {
         boolean prime = isPrime(num);
@@ -38,7 +38,7 @@ public class Main {
         if (prime) return "Prime";
         if (perfect) return "Perfect";
         return "Neither";
-    }
+    
 
     public static boolean isPrime(int n) {
         if (n < 2) return false;
@@ -46,7 +46,7 @@ public class Main {
             if (n % i == 0) return false;
         }
         return true;
-    }
+    
 
     public static boolean isPerfect(int n) {
         if (n < 2) return false;
@@ -60,4 +60,5 @@ public class Main {
     }
 }
     }
+}
 }
