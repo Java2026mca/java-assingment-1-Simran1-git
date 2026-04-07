@@ -9,7 +9,18 @@ public class Main {
         //       F(0)=0, F(1)=1, F(n)=F(n-1)+F(n-2)
         //
         // Input: 8
-        // Output: 0 1 1 2 3 5 8 13
+        // Output: 0 1 1 2 3 5 8
+        int firstTerm = 0, secondTerm = 1;
+        
+        System.out.println("First " + n + " Fibonacci numbers:");
+        
+        for (int i = 1; i <= n; ++i) {
+            System.out.print(firstTerm + " ");
 
+            // Compute the next term
+            int nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
     }
 }
