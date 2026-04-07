@@ -10,17 +10,15 @@ public class Main {
         //
         // Input: 8
         // Output: 0 1 1 2 3 5 8
-        int firstTerm = 0, secondTerm = 1;
-        
-        System.out.println("First " + n + " Fibonacci numbers:");
-        
-        for (int i = 1; i <= n; ++i) {
-            System.out.print(firstTerm + " ");
+       long a = 0, b = 1;
 
-            // Compute the next term
-            int nextTerm = firstTerm + secondTerm;
-            firstTerm = secondTerm;
-            secondTerm = nextTerm;
+        for (int i = 0; i < n; i++) {
+            System.out.print(a + (i == n - 1 ? "" : " "));
+            long next = a + b;
+            a = b;
+            b = next;
         }
+       // System.out.println();
+        sc.close();
     }
 }
