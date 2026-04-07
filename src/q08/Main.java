@@ -26,6 +26,36 @@ public class Main {
         // 20
         // 10
         // EMPTY
+         int[] stack = new int[n]; // Max size n based on total operations
+        int top = -1;
 
+        for (int i = 0; i < n; i++) {
+            String op = sc.next().toUpperCase();
+            
+            switch (op) {
+                case "PUSH":
+                    int x = sc.nextInt();
+                    stack[++top] = x;
+                    break;
+                case "POP":
+                    if (top == -1) {
+                        System.out.println("EMPTY");
+                    } else {
+                        System.out.println(stack[top--]);
+                    }
+                    break;
+                case "PEEK":
+                    if (top == -1) {
+                        System.out.println("EMPTY");
+                    } else {
+                        System.out.println(stack[top]);
+                    }
+                    break;
+                case "SIZE":
+                    System.out.println(top + 1);
+                    break;
+            }
+        }
+        sc.close();
     }
 }
