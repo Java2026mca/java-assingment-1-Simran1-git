@@ -19,6 +19,40 @@ public class Main {
         // Output:
         // 19 22
         // 43 50
+         int[][] A = new int[n][n];
+        int[][] B = new int[n][n];
+        int[][] C = new int[n][n];
 
+        // Read Matrix A
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                A[i][j] = sc.nextInt();
+            }
+        }
+
+        // Read Matrix B
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                B[i][j] = sc.nextInt();
+            }
+        }
+
+        // Multiplication Logic: C[i][j] = sum(A[i][k] * B[k][j])
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int k = 0; k < n; k++) {
+                    C[i][j] += A[i][k] * B[k][j];
+                }
+            }
+        }
+
+        // Print Result Matrix
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(C[i][j] + (j == n - 1 ? "" : " "));
+            }
+            System.out.println();
+        }
+        sc.close();
     }
 }
