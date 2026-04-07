@@ -55,5 +55,6 @@ public class Main {
                 }
             }
           }
+          return sum == n;
     }
 }
