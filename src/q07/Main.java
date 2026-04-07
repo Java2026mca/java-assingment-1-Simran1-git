@@ -17,17 +17,16 @@ public class Main {
         // Output:
         // 12 22 25 34 64
         // Swaps: 7
-         int[] arr = new int[n];
+        int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
 
         int swaps = 0;
-        // Manual Bubble Sort
+        // Standard Bubble Sort: The inner loop must decrease in size
         for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
+            for (int j = 0; j < n - 1 - i; j++) { // Important: n-1-i
                 if (arr[j] > arr[j + 1]) {
-                    // Swap elements
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -36,7 +35,6 @@ public class Main {
             }
         }
 
-        // Print sorted array
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + (i == n - 1 ? "" : " "));
         }
