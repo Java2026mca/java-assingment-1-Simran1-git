@@ -20,7 +20,7 @@ public class Main {
         // Prime
         // Neither
         // Perfect
-         if (!sc.hasNextInt()) return;
+        // if (!sc.hasNextInt()) return;
          for (int i = 0; i < n; i++) {
             if (sc.hasNextInt()) {
                 int num = sc.nextInt();
@@ -28,8 +28,7 @@ public class Main {
             }
         }
         sc.close();
-    
-
+    }
     public static String classify(int num) {
         boolean prime = isPrime(num);
         boolean perfect = isPerfect(num);
@@ -38,15 +37,14 @@ public class Main {
         if (prime) return "Prime";
         if (perfect) return "Perfect";
         return "Neither";
-    
-
+    }
     public static boolean isPrime(int n) {
         if (n < 2) return false;
         for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) return false;
         }
         return true;
-    
+    }
 
     public static boolean isPerfect(int n) {
         if (n < 2) return false;
@@ -57,8 +55,7 @@ public class Main {
                 if (i * i != n) {
                     sum += n / i;
                 }
+            }
+          }
     }
-}
-    }
-}
 }
