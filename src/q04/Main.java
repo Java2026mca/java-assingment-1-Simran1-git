@@ -20,13 +20,11 @@ public class Main {
         // Prime
         // Neither
         // Perfect
-        // if (!sc.hasNextInt()) return;
          for (int i = 0; i < n; i++) {
-            if (sc.hasNextInt()) {
                 int num = sc.nextInt();
                 System.out.println(classify(num));
             }
-        }
+        
         sc.close();
     }
     public static String classify(int num) {
